@@ -6,7 +6,7 @@ const Shimmer = () => {
         .map((_, index) => (
           <div
             key={index}
-            className="w-full h-64 bg-gradient-to-r from-slate-500 to-slate-600 animate-pulse shadow-md"
+            className="w-full h-64 rounded-lg bg-gradient-to-r from-slate-500 to-slate-600 animate-pulse shadow-md"
           ></div>
         ))}
     </div>
