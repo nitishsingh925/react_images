@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import Images from "./Images";
 import useFetchData from "../hooks/useFetchData";
+import Shimmer from "./Shimmer";
 
 const Search = () => {
   const searchInput = useRef(null);
@@ -39,7 +40,7 @@ const Search = () => {
         </div>
       </div>
 
-      {loading ? <h1>Loading....</h1> : <Images images={images} />}
+      {loading ? <Shimmer /> : <Images images={images} />}
     </>
   );
 };
