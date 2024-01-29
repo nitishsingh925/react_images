@@ -2,13 +2,16 @@ import { useRef, useState } from "react";
 import Images from "./Images";
 import useFetchData from "../hooks/useFetchData";
 import Shimmer from "./Shimmer";
+import useInfiniteScroll from "../hooks/useInfiniteScroll";
 
 const Search = () => {
   const searchInput = useRef(null);
   const [searchValue, setSearchValue] = useState(null);
+  const [pageNo, setPageNo] = useState(1);
 
   const handleSearch = () => {
     setSearchValue(searchInput.current.value);
+    setPageNo(1);
   };
 
   const handleKeyPress = (event) => {
@@ -17,7 +20,15 @@ const Search = () => {
     }
   };
 
-  const { images, loading } = useFetchData(searchValue);
+  const handleLoadMore = () => {
+    if (!loading) {
+      setPageNo((prevPage) => prevPage + 1);
+    }
+  };
+
+  useInfiniteScroll(handleLoadMore);
+
+  const { images, loading } = useFetchData(searchValue, pageNo);
 
   return (
     <>
