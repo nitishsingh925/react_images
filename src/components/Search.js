@@ -16,7 +16,7 @@ const Search = () => {
     }
   };
 
-  const images = useFetchData(searchValue);
+  const { images, loading } = useFetchData(searchValue);
 
   return (
     <>
@@ -39,7 +39,7 @@ const Search = () => {
         </div>
       </div>
 
-      <Images images={images} />
+      {loading ? <h1>Loading....</h1> : <Images images={images} />}
     </>
   );
 };
