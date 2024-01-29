@@ -11,6 +11,10 @@ const Images = ({ images }) => {
             loading="lazy"
             className="w-full h-64 object-cover rounded-lg"
           />
+          <div className="flex justify-between">
+            <p>📌{image.user.location}</p>
+            <p>👤{image.user.name}</p>
+          </div>
         </a>
       ))}
     </div>

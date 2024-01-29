@@ -4,9 +4,6 @@ import { API_KEY, API_URL, IMAGES_IN_PAGE } from "../utils/constants";
 const useFetchData = (searchValue, pageNo) => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  console.log(pageNo);
-
   useEffect(() => {
     const fetchImages = async () => {
       try {
