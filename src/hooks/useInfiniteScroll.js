@@ -3,10 +3,11 @@ import { useEffect } from "react";
 const useInfiniteScroll = (callback) => {
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
-      ) {
+      const isAtBottom =
+        window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.scrollHeight;
+
+      if (isAtBottom) {
         callback();
       }
     };
