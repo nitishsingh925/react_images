@@ -1,6 +1,6 @@
 const Shimmer = () => {
   return (
-    <div className="mt-4 grid grid-cols-3 gap-4">
+    <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-4 ps-4 pe-4 ">
       {Array(15)
         .fill("")
         .map((_, index) => (

@@ -2,7 +2,7 @@ import React from "react";
 
 const Images = ({ images }) => {
   return (
-    <div className="mt-4 grid grid-cols-3 gap-4">
+    <div className="mt-4 grid grid-cols-2 lg:grid-cols-3 gap-4 ps-4 pe-4 ">
       {images.map((image) => (
         <a
           href={image.urls.full}
@@ -16,7 +16,7 @@ const Images = ({ images }) => {
             loading="lazy"
             className="w-full h-64 object-cover rounded-lg"
           />
-          <div className=" hidden sm:flex  justify-between dark:text-white">
+          <div className=" hidden md:flex  justify-between dark:text-white">
             <p>📌{image.user.location}</p>
             <p>👤{image.user.name}</p>
           </div>
