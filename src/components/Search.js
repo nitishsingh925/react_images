@@ -38,7 +38,7 @@ const Search = () => {
       <div className="dark:bg-black h-screen">
         <div className="text-right py-2 px-4">
           <button onClick={toggleThemeHandler} className="text-5xl">
-            {mode === "light" ? "🌞" : "🌛"}
+            {mode === "light" ? "🌛" : "🌞"}
           </button>
         </div>
         <div className="text-center py-14">
