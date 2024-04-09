@@ -1,6 +1,6 @@
 # React Images
 
-### live link =>   https://nitishsingh925images.netlify.app/
+## live link =>   https://nitishsingh925images.netlify.app/
 
 ## Getting Started
 
